@@ -10,7 +10,7 @@ connection.connect((err) => {
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send({ data: "Here is your data" });
+    res.render("register/register");
   }
 )
 
@@ -18,12 +18,12 @@ router.post('/', (req, res) => {
   const {name_user, email_user, telefone_user, password_user} = req.body;
   connection.query(
       'INSERT INTO user (name_user, email_user, telefone_user, password_user) VALUES (?, ?, ?, ?)',
-      [ name_user, type_user, email_user, telefone_user, password_user],
+      [ name_user, email_user, telefone_user, password_user],
       (err, results) => {
         if (err) {
           console.error('Erreur lors de l\'insertion des données : ', err);
         }
-        res.send(req.body)
+        res.render("login/login")
       }
     );
   }

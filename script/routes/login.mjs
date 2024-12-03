@@ -16,7 +16,7 @@ connection.connect((err) => {
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send();
+    res.render("login/login")
   }
 )
 
@@ -36,7 +36,8 @@ router.post('/', (req, res) => {
                 user.id_user = results[0].id_user;
                 user.name_user = results[0].name_user;
                 user.telefone_user = results[0].telefone_user;
-                res.send(user);
+                res
+                res.render("index")
             } else {
                 return res.send({
                     success: false,
