@@ -15,7 +15,17 @@ router.get('/', (req, res) => {
 )
 
 router.post('/', (req, res) => {
-    res.send({ data: `Utilisateur créé et stocké dans la base de données` })
+  const {name_user, email_user, telefone_user, password_user} = req.body;
+  connection.query(
+      'INSERT INTO user (name_user, email_user, telefone_user, password_user) VALUES (?, ?, ?, ?)',
+      [ name_user, type_user, email_user, telefone_user, password_user],
+      (err, results) => {
+        if (err) {
+          console.error('Erreur lors de l\'insertion des données : ', err);
+        }
+        res.send(req.body)
+      }
+    );
   }
 )
 

@@ -1,16 +1,17 @@
 import express from 'express';
-import { connection }  from "./connectionDB.mjs";
+import { user } from './login.mjs';
+// import { connection }  from "./connectionDB.mjs";
 
-connection.connect((err) => {
-    if(err) {
-        console.error('Erreur de connexion à la base de données');
-    }
-})
+// connection.connect((err) => {
+//     if(err) {
+//         console.error('Erreur de connexion à la base de données');
+//     }
+// })
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.send();
+    res.send(user);
   }
 )
 
