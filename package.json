@@ -1,0 +1,17 @@
+{
+  "name": "orange-hackaton-2024",
+  "version": "1.0.0",
+  "description": "Orange comissioned every BeCode partner to develop a webapp with their API within a week, so we answered their call and tried our best !",
+  "main": "apiTest.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module"
+}
