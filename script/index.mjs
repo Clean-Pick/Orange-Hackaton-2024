@@ -5,6 +5,8 @@ import registerRoute from './routes/register.mjs';
 import { router as loginRoute } from './routes/login.mjs';
 import usersRoute from './routes/users.mjs';
 import mainPageRoute from './routes/mainPage.mjs'
+import animalRegisterRoute from "./routes/animalRegister.mjs";
+import animalsRoute from "./routes/animals.mjs";
 
 
 import { connection }  from "./routes/connectionDB.mjs";
@@ -35,6 +37,8 @@ app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'html');
 
 app.use("/animap/register", registerRoute);
+app.use("/animap/animal/register", animalRegisterRoute);
+app.use("/animap/api/animals", animalsRoute);
 app.use("/animap/login", loginRoute);
 app.use("/animap/api/users", usersRoute);
 app.use("/animap/index", mainPageRoute);
