@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
         if (err) {
           console.error('Erreur lors de l\'insertion des données : ', err);
         }
-        res.render("login/login")
+        res.redirect("/animap/login");
       }
     );
   }
