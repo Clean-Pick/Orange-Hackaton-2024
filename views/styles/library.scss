@@ -1,3 +1,26 @@
 // Variables de grid
+
 $containerGrid: 1fr 12fr 1fr;
-$childColumn : 2
+$childColumn: 2;
+
+// Variable padding
+$sectionPadding: 32px;
+$blockPadding: 16px;
+$elementPadding: 8px;
+
+// Variable pour le body
+@mixin sizeBody {
+  min-width: 375px;
+  max-width: 425px;
+  max-height: 820px;
+  margin: auto;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+// Nunito
+@mixin Nunito {
+  font-family: "Nunito";
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
