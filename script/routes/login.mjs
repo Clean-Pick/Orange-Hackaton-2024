@@ -1,4 +1,6 @@
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { connection }  from "./connectionDB.mjs";
 
 export const user = {
@@ -15,8 +17,11 @@ connection.connect((err) => {
 
 const router = express.Router();
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 router.get('/', (req, res) => {
-    res.render("login/login")
+    res.sendFile(path.join(__dirname, '../../views/login/login.html'));
   }
 )
 
@@ -36,8 +41,7 @@ router.post('/', (req, res) => {
                 user.id_user = results[0].id_user;
                 user.name_user = results[0].name_user;
                 user.telefone_user = results[0].telefone_user;
-                res
-                res.render("index")
+                res.redirect("/animap/index");
             } else {
                 return res.send({
                     success: false,
