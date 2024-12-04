@@ -79,7 +79,7 @@ h4 {
   font-size: 28px;
 }
 
-body {
+footer {
   font-family: "Nunito", sans-serif;
   min-width: 375px;
   max-width: 425px;
@@ -87,87 +87,40 @@ body {
   margin: auto;
   overflow: auto;
   box-sizing: border-box;
-  display: flex;
-  place-items: center;
-  background-color: red;
-}
-
-.login-container {
-  font-family: "Nunito", sans-serif;
-  min-width: 375px;
-  max-width: 425px;
-  max-height: 820px;
-  margin: auto;
-  overflow: auto;
-  box-sizing: border-box;
-  background-color: #fff;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.login-toggle {
   position: relative;
+  overflow: visible;
   display: flex;
-  border: 1px solid white;
-  border-radius: 30px;
-  width: -moz-fit-content;
-  width: fit-content;
-  z-index: 2;
-  transform: translate(80px, 100px);
-}
-.login-toggle button {
-  background: none;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 0 20px 20px 0;
-}
-.login-toggle button.active {
-  background-color: white;
-  color: black;
-}
-
-.login-cat {
-  transform: translateY(-50px);
-  z-index: 1;
-}
-
-h1 {
-  font-size: 40px;
-  margin: 20px 0 5px;
-  color: #000;
-}
-
-h4 {
-  font-size: 20px;
-}
-
-p {
-  font-size: 14px;
-  color: #0b0b0b;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 80%;
+  justify-content: center;
+  transform: translateY(100px);
+  background-color: #b3b3b3;
+  height: 65px;
+  width: 375px;
 }
-form input {
+footer .footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: none;
-  border-bottom: 1px solid #070707;
+  max-width: 375px;
+  margin: auto;
+  gap: 30px;
+  padding: 0 40px;
 }
-form .validate-btn {
-  background-color: #d9eaff;
-  border: none;
-  color: #000;
-  padding: 10px 20px;
-  border-radius: 15px;
+footer .footer-container .footer-button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-}/*# sourceMappingURL=login.css.map */
+}
+footer .footer-container .footer-button.center-button {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  z-index: 1;
+  transform: translateY(-25px);
+  background-color: #b3b3b3;
+  border-radius: 30px;
+  border: 2px solid #b3b3b3;
+}/*# sourceMappingURL=footer.css.map */

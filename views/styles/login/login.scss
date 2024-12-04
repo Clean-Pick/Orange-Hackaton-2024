@@ -1,2 +1,86 @@
-@use "../reset_css.scss";
-@use "../librairies.scss";
+@use "../reset_css.css";
+@use "../library";
+
+body {
+    @include library.sizeBody;
+    display: flex;
+    place-items: center;
+    background-color: red;
+  }
+  
+  .login-container {
+    @include library.sizeBody;
+    background-color: #fff;
+    height: 100%;         
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .login-toggle {
+    position: relative;
+    display: flex;
+    border: 1px solid white;
+    border-radius: 30px;
+    width: fit-content;
+    z-index: 2;
+    transform: translate(80px, 100px);
+  
+    button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 0 20px 20px 0;
+  
+      &.active {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+  
+  .login-cat {
+    transform: translateY(-50px);
+    z-index: 1;
+    
+  }
+  
+  h1 {
+    font-size: 40px;
+    margin: 20px 0 5px;
+    color: #000;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 14px;
+    color: #0b0b0b;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-bottom: 1px solid #070707;
+    }
+  
+    .validate-btn {
+      background-color: #d9eaff;
+      border: none;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+  }
+  
