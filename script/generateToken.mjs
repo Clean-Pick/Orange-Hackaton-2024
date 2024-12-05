@@ -9,7 +9,7 @@ let cachedToken = null;
 let tokenExpirationTime = null;
 
 // Function to get a new access token
-async function generateToken() {
+export async function generateToken() {
     if (cachedToken && Date.now() < tokenExpirationTime) {
         console.log('Using cached token');
         return cachedToken;
@@ -45,7 +45,5 @@ async function generateToken() {
     }
     
 }
-
-generateToken()
 
 

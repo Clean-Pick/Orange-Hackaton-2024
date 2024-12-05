@@ -1,0 +1,18 @@
+<svg width="375" height="409" viewBox="0 0 375 409" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="191" cy="195" rx="231" ry="214" fill="black"/>
+<path d="M193 340.5C178.5 361.5 146 351 146 335" stroke="#575656" stroke-width="2"/>
+<path d="M193 340.5C207.5 361.5 240 351 240 335" stroke="#575656" stroke-width="2"/>
+<ellipse cx="198.515" cy="307.312" rx="12" ry="18.2019" transform="rotate(-147.48 198.515 307.312)" fill="#575656"/>
+<ellipse cx="187.766" cy="307.806" rx="12" ry="18.2019" transform="rotate(148.351 187.766 307.806)" fill="#575656"/>
+<line x1="193" y1="341" x2="193" y2="324" stroke="#575656" stroke-width="2"/>
+<path d="M182 350C192.057 355.433 200.857 352.264 204 350" stroke="#575656" stroke-width="2"/>
+<ellipse cx="97" cy="267" rx="28" ry="20" fill="#7E7D7D"/>
+<circle cx="96.5" cy="233.5" r="39.5" fill="#798A5D"/>
+<circle cx="97" cy="234" r="35" fill="#252323"/>
+<circle cx="82" cy="217" r="9" fill="white"/>
+<ellipse cx="274" cy="267" rx="28" ry="20" fill="#7E7D7D"/>
+<circle cx="273.5" cy="233.5" r="39.5" fill="#798A5D"/>
+<circle cx="274" cy="234" r="35" fill="#252323"/>
+<circle cx="259" cy="217" r="9" fill="white"/>
+<rect x="-14" y="-145" width="400" height="238" fill="black"/>
+</svg>
