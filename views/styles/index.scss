@@ -1,2 +1,154 @@
 @use "reset_css";
 @use "library";
+
+body {
+  @include library.sizeBody;
+  @include library.Nunito;
+}
+
+.container {
+  @include library.sizeBody;
+}
+
+header {
+
+  #map {
+    z-index: -1;
+  }
+
+  .emergency__container {
+    display: grid;
+    grid-template-columns: library.$containerGrid;
+  }
+
+  .phone-button {
+    grid-column: 2;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    margin-top: -2em;
+
+    background-color: #dc4c4e;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    z-index: 10;
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 0.5rem;
+
+      color: white;
+    }
+
+    h1 {
+      color: #fff;
+    }
+  }
+}
+
+.reports {
+  padding: 2rem;
+
+  .reports__title {
+
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  #report-list {
+    display: grid;
+    gap: 8px;
+
+    .report-card {
+      display: grid;
+      grid-template-columns: 20px auto 20px;
+
+      background-color: #a3afbc;
+
+      border-radius: 20px;
+
+      width: 100%;
+
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex: 1 1 calc(50% - 1rem);
+
+      .reportCard__textContent {
+        grid-column: 2;
+        grid-row: 1;
+
+        margin-top: library.$blockPadding;
+
+        h4 {
+          margin-bottom: 0;
+        }
+
+        .infos {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: library.$elementPadding;
+        }
+
+        .infos__imgContainer {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+
+          width: 21px;
+          height: 21px;
+
+          background-color: #aaaaaa;
+          border-radius: 50px;
+
+          align-self: baseline;
+
+          margin-right: library.$elementPadding;
+
+          img {
+            width: 15px;
+            height: auto;
+
+            object-fit: contain;
+          }
+        }
+
+        .infos__date,
+        .infos__adress {
+          width: 85%;
+
+          margin-bottom: 8px;
+        }
+      }
+
+
+      .image__container {
+        grid-column-start: 1;
+        grid-column-end: 4;
+
+        grid-row: 2;
+
+        width: 100%;
+        max-height: 250px;
+        height: auto;
+
+        margin-bottom: library.$blockPadding;
+
+        img {
+          width: 100%;
+          max-height: 100%;
+          height: auto;
+
+          object-fit: cover;
+          object-position: 0 30%;
+        }
+      }
+    }
+  }
+}

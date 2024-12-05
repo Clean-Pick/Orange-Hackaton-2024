@@ -21,8 +21,7 @@ html:focus-within {
 }
 
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 img,
@@ -115,8 +114,8 @@ p {
 }
 
 .pseudo {
-  font-size: 8px;
-  line-height: 8px;
+  font-size: 12px;
+  line-height: 12px;
 }
 
 h1, h2, h3, h4 {
@@ -209,4 +208,6 @@ footer .footer-container .footer-button.center-button {
   background-color: #b3b3b3;
   border-radius: 30px;
   border: 2px solid #b3b3b3;
-}/*# sourceMappingURL=footer.css.map */
+}
+
+/*# sourceMappingURL=footer.css.map */
