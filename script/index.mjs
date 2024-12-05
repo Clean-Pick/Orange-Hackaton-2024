@@ -31,6 +31,7 @@ app.use(express.json());
 // app.set("view engine", "ejs");
 app.use(express.urlencoded({extended: true}));
 app.use('../script', express.static(path.join(__dirname, 'script')));
+app.use(express.static(path.join(__dirname, '../')));
 
 // Vous pouvez aussi servir votre dossier 'views' si nécessaire pour les moteurs de vue
 app.set('views', path.join(__dirname, '../views'));
