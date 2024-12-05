@@ -28,7 +28,7 @@ body {
       background: none;
       border: none;
       color: white;
-      padding: 0.6rem 1.25rem;
+      padding: 0.1rem 1rem;
       cursor: pointer;
       border-radius: 0 1.25rem 1.25rem 0;
   
@@ -55,6 +55,7 @@ body {
   p {
     font-size: 14px;
     color: #0b0b0b;
+    font-weight: 700;
   }
   
   form {
@@ -73,11 +74,13 @@ body {
   
     .validate-btn {
       background-color: #d9eaff;
+      width: 30%;
+      border-radius: 50px;
       border: none;
-      color: #000;
+      background-color: #d0dff1;
       padding: 0.5rem 0;
-      border-radius: 15px;
-      cursor: pointer;
+      margin: 0.5rem auto 0 auto;
+      font-weight: 700;
     }
   }
   
