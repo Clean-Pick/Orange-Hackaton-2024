@@ -70,7 +70,12 @@ body {
   margin: auto;
   overflow: auto;
   box-sizing: border-box;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
   font-family: "Nunito";
+}
+body ::-webkit-scrollbar {
+  display: none;
 }
 
 .login-container {
@@ -80,11 +85,16 @@ body {
   margin: auto;
   overflow: auto;
   box-sizing: border-box;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
   background-color: #fff;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.login-container ::-webkit-scrollbar {
+  display: none;
 }
 
 .login-toggle {
@@ -92,16 +102,15 @@ body {
   display: flex;
   border: 1px solid white;
   border-radius: 1.8rem;
-  width: -moz-fit-content;
   width: fit-content;
   z-index: 2;
-  transform: translate(3rem, 6.5rem);
+  transform: translate(7rem, 7.4rem);
 }
 .login-toggle button {
   background: none;
   border: none;
   color: white;
-  padding: 0.6rem 1.25rem;
+  padding: 0.1rem 1rem;
   cursor: pointer;
   border-radius: 0 1.25rem 1.25rem 0;
 }
@@ -113,6 +122,7 @@ body {
 .login-cat {
   transform: translateY(-45px);
   z-index: 1;
+  width: 425px;
 }
 
 h1 {
@@ -128,6 +138,7 @@ h4 {
 p {
   font-size: 14px;
   color: #0b0b0b;
+  font-weight: 700;
 }
 
 form {
@@ -145,9 +156,13 @@ form input {
 }
 form .validate-btn {
   background-color: #d9eaff;
+  width: 30%;
+  border-radius: 50px;
   border: none;
-  color: #000;
+  background-color: #d0dff1;
   padding: 0.5rem 0;
-  border-radius: 15px;
-  cursor: pointer;
-}/*# sourceMappingURL=login.css.map */
+  margin: 0.5rem auto 0 auto;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=login.css.map */
