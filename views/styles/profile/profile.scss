@@ -1,10 +1,14 @@
-@use '../reset_css';
-@use '../library';
+@use "../reset_css";
+@use "../library";
 
 body {
   @include library.sizeBody;
 
   margin: auto;
+}
+
+.container {
+  @include library.sizeBody;
 }
 
 .catHeader__container {
@@ -40,7 +44,8 @@ body {
 
     margin-bottom: library.$blockPadding;
 
-    h4, p {
+    h4,
+    p {
       text-align: center;
       width: 100%;
     }
@@ -109,7 +114,6 @@ body {
         }
       }
     }
-
   }
 }
 
@@ -148,7 +152,6 @@ body {
       width: 100%;
     }
 
-
     .yourPets__listItem {
       list-style: none;
 
@@ -162,7 +165,6 @@ body {
       padding-top: 8px;
       padding-bottom: 8px;
 
-
       background-color: #d7d7d7;
 
       border-radius: 150px 20px 20px 150px;
@@ -170,7 +172,6 @@ body {
       .yourPets__listItem__imgContainer {
         height: 102px;
         width: 102px;
-
 
         img {
           height: 100%;
@@ -219,15 +220,14 @@ body {
           }
         }
 
-        .yourPets__listItem__infos__date, .yourPets__listItem__infos__adress {
+        .yourPets__listItem__infos__date,
+        .yourPets__listItem__infos__adress {
           width: 85%;
 
           margin-bottom: 8px;
         }
       }
     }
-
-
   }
 
   .yourPets__addPet {
