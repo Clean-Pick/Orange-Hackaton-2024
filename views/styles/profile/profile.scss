@@ -1,0 +1,252 @@
+@use '../reset_css';
+@use '../library';
+
+body {
+  @include library.sizeBody;
+
+  margin: auto;
+}
+
+.catHeader__container {
+  width: 100%;
+  height: 255px;
+
+  margin-bottom: library.$sectionPadding;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+.basicUserData__container {
+  display: grid;
+  grid-template-columns: library.$containerGrid;
+
+  justify-content: center;
+
+  margin-bottom: library.$sectionPadding;
+
+  .basicUserData__usernameBlock {
+    grid-column: 2;
+    grid-row: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    width: 100%;
+
+    margin-bottom: library.$blockPadding;
+
+    h4, p {
+      text-align: center;
+      width: 100%;
+    }
+
+    p {
+      height: 43px;
+    }
+  }
+
+  .basicUserData__personalDataBlock {
+    grid-column: 2;
+    grid-row: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .basicUserData__personalDataBlock__userNumberBlock {
+      width: 100%;
+      margin-bottom: library.$elementPadding;
+
+      .basicUserData__personalDataBlock__userNumberBlock__textContent {
+        display: flex;
+        flex-wrap: nowrap;
+
+        justify-content: space-between;
+
+        .bold {
+          width: 20%;
+          justify-self: start;
+
+          text-align: start;
+        }
+
+        .text {
+          width: 70%;
+          justify-self: end;
+
+          text-align: end;
+        }
+      }
+    }
+
+    .basicUserData__personalDataBlock__userMailBlock {
+      width: 100%;
+
+      .basicUserData__personalDataBlock__userMailBlock__textContent {
+        display: flex;
+        flex-wrap: nowrap;
+
+        justify-content: space-between;
+
+        overflow: hidden;
+
+        .bold {
+          width: 20%;
+          justify-self: start;
+
+          text-align: start;
+        }
+
+        .text {
+          width: 70%;
+          justify-self: end;
+
+          text-align: end;
+        }
+      }
+    }
+
+  }
+}
+
+.yourPets__container {
+  display: grid;
+  grid-template-columns: library.$containerGrid;
+
+  justify-content: center;
+
+  margin-bottom: library.$sectionPadding;
+
+  h4 {
+    grid-column: 2;
+    grid-row: 1;
+
+    justify-self: center;
+    text-align: center;
+
+    width: 100%;
+
+    margin-bottom: library.$blockPadding;
+  }
+
+  .yourPets__listContainer {
+    grid-column: 2;
+    grid-row: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    margin-bottom: library.$blockPadding;
+
+    ul {
+      width: 100%;
+    }
+
+
+    .yourPets__listItem {
+      list-style: none;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      width: 100%;
+
+      margin-bottom: library.$elementPadding;
+
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+
+      background-color: #d7d7d7;
+
+      border-radius: 150px 20px 20px 150px;
+
+      .yourPets__listItem__imgContainer {
+        height: 102px;
+        width: 102px;
+
+
+        img {
+          height: 100%;
+          width: 100%;
+
+          border-radius: 150px;
+        }
+      }
+
+      .yourPets__listItem__textContainer {
+        margin-left: 15px;
+        height: 100%;
+
+        width: 65%;
+
+        .bold {
+          height: 22px;
+          margin-bottom: library.$elementPadding;
+        }
+
+        .yourPets__listItem__infos {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .yourPets__listItem__infos__imgContainer {
+          display: flex;
+          justify-content: center;
+          align-content: center;
+
+          width: 21px;
+          height: 21px;
+
+          background-color: #aaaaaa;
+          border-radius: 50px;
+
+          align-self: baseline;
+
+          margin-right: library.$elementPadding;
+
+          img {
+            width: 15px;
+            height: auto;
+
+            object-fit: contain;
+          }
+        }
+
+        .yourPets__listItem__infos__date, .yourPets__listItem__infos__adress {
+          width: 85%;
+
+          margin-bottom: 8px;
+        }
+      }
+    }
+
+
+  }
+
+  .yourPets__addPet {
+    grid-column: 2;
+    grid-row: 3;
+
+    display: flex;
+
+    width: 100%;
+
+    button {
+      width: 100%;
+      height: 40px;
+
+      background-color: #d99393;
+      color: white;
+
+      border: none;
+      border-radius: 20px;
+    }
+  }
+}
