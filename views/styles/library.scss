@@ -1,34 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 // Variables de grid
-$containerGrid: 1fr 12fr 1fr;
-$childColumn : 2;
 
-//padding verticau (top et/ou bottom)
-$sectionPadding : 32px; //titre section
-$blockPadding : 16px; //entre chaque bloc de sous-section
-$elementPadding : 8px; //entre chaque élément d'un bloc de sous section
+$containerGrid: 1fr 12fr 1fr;
+$childColumn: 2;
+
+// Variable padding
+$sectionPadding: 32px;
+$blockPadding: 16px;
+$elementPadding: 8px;
 
 // Variable pour le body
 @mixin sizeBody {
-    font-family: 'Nunito', sans-serif;
-    min-width: 375px;
-    max-width: 425px;
-    max-height: 820px;
-    margin: auto;
-    overflow: auto;
-    box-sizing: border-box;
+  min-width: 375px;
+  max-width: 425px;
+  max-height: 820px;
+  margin: auto;
+  overflow: auto;
+  box-sizing: border-box;
 }
 
-h1{
-    font-size: 40px;
+// Nunito
+@mixin Nunito {
+  font-family: "Nunito";
 }
-h2{
-    font-size: 35px;
-}
-h3{
-    font-size: 30px;
-}
-h4{
-    font-size: 28px;
-}
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");

@@ -3,9 +3,7 @@
 
 body {
     @include library.sizeBody;
-    display: flex;
-    place-items: center;
-    background-color: red;
+    @include library.Nunito;
   }
   
   .login-container {
@@ -21,18 +19,18 @@ body {
     position: relative;
     display: flex;
     border: 1px solid white;
-    border-radius: 30px;
+    border-radius: 1.8rem;
     width: fit-content;
     z-index: 2;
-    transform: translate(80px, 100px);
+    transform: translate(3rem, 6.5rem);
   
     button {
       background: none;
       border: none;
       color: white;
-      padding: 10px 20px;
+      padding: 0.6rem 1.25rem;
       cursor: pointer;
-      border-radius: 0 20px 20px 0;
+      border-radius: 0 1.25rem 1.25rem 0;
   
       &.active {
         background-color: white;
@@ -42,14 +40,13 @@ body {
   }
   
   .login-cat {
-    transform: translateY(-50px);
+    transform: translateY(-45px);
     z-index: 1;
-    
   }
   
   h1 {
     font-size: 40px;
-    margin: 20px 0 5px;
+    margin: 1.25rem 0;
     color: #000;
   }
   h4 {
@@ -69,7 +66,7 @@ body {
     input {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
+      margin: 0.6rem 0;
       border: none;
       border-bottom: 1px solid #070707;
     }
@@ -78,7 +75,7 @@ body {
       background-color: #d9eaff;
       border: none;
       color: #000;
-      padding: 10px 20px;
+      padding: 0.5rem 0;
       border-radius: 15px;
       cursor: pointer;
     }
