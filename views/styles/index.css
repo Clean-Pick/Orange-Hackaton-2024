@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 *,
 *::before,
 *::after {
@@ -20,8 +21,7 @@ html:focus-within {
 }
 
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 img,
@@ -114,8 +114,8 @@ p {
 }
 
 .pseudo {
-  font-size: 8px;
-  line-height: 8px;
+  font-size: 12px;
+  line-height: 12px;
 }
 
 h1, h2, h3, h4 {
@@ -170,6 +170,123 @@ p {
 .pseudo {
   font-size: 8px;
   line-height: 8px;
+}
+
+body {
+  min-width: 375px;
+  max-width: 425px;
+  max-height: 820px;
+  margin: auto;
+  overflow: auto;
+  box-sizing: border-box;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+  font-family: "Nunito";
+}
+body ::-webkit-scrollbar {
+  display: none;
+}
+
+header #map {
+  z-index: -1;
+}
+header .emergency__container {
+  display: grid;
+  grid-template-columns: 1fr 12fr 1fr;
+}
+header .phone-button {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: -2em;
+  background-color: #dc4c4e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  z-index: 10;
+}
+header .phone-button img {
+  width: 50px;
+  height: 50px;
+  margin-right: 0.5rem;
+  color: white;
+}
+header .phone-button h1 {
+  color: #fff;
+}
+
+.reports {
+  padding: 2rem;
+}
+.reports .reports__title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.reports #report-list {
+  display: grid;
+  gap: 8px;
+}
+.reports #report-list .report-card {
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  background-color: #a3afbc;
+  border-radius: 20px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 1rem);
+}
+.reports #report-list .report-card .reportCard__textContent {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 16px;
+}
+.reports #report-list .report-card .reportCard__textContent h4 {
+  margin-bottom: 0;
+}
+.reports #report-list .report-card .reportCard__textContent .infos {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.reports #report-list .report-card .reportCard__textContent .infos__imgContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 21px;
+  height: 21px;
+  background-color: #aaaaaa;
+  border-radius: 50px;
+  align-self: baseline;
+  margin-right: 8px;
+}
+.reports #report-list .report-card .reportCard__textContent .infos__imgContainer img {
+  width: 15px;
+  height: auto;
+  object-fit: contain;
+}
+.reports #report-list .report-card .reportCard__textContent .infos__date,
+.reports #report-list .report-card .reportCard__textContent .infos__adress {
+  width: 85%;
+  margin-bottom: 8px;
+}
+.reports #report-list .report-card .image__container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 2;
+  width: 100%;
+  max-height: 250px;
+  height: auto;
+  margin-bottom: 16px;
+}
+.reports #report-list .report-card .image__container img {
+  width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: 0 30%;
 }
 
 /*# sourceMappingURL=index.css.map */
