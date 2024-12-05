@@ -1,17 +1,16 @@
-@use "../reset_css.css";
+@use "../reset_css";
 @use "../library";
 
 footer {
-  @include library.sizeBody;
-  position: relative;
+  margin-top: 20%;
   overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(100px); //Test
   background-color: #b3b3b3;
   height: 65px;
   width: 425px;
+  border-radius: 0 0 50px 50px;
 
   .footer-container {
     display: flex;
