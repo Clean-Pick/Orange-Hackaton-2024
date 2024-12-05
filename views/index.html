@@ -9,13 +9,17 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="/views/styles/index.css">
+    <link rel="stylesheet" href="../styles/footer/footer.css">
+
+    <title>Home</title>
 </head>
 <body>
-    <div id="map" style="height: 306px;"></div>
-    <script>
-        const data = [
-            {
+    <header>
+        <div id="map" style="height: 306px;"></div>
+            <script>
+             const data = [
+             {
             name: 'MS Moby Dick - Den Rhein erleben... BFF - Bonner Fähr- und Fahrgastschifffahrt - Bonner Schifffahrt',
             lat: 50.7329687,
             lon: 7.1096064
@@ -108,18 +112,18 @@
             lat: 50.73830419999999,
             lon: 7.106966
             }
-        ]
+            ]
         
-        const map = L.map('map').setView([50.735851, 7.10066], 13);
+         const map = L.map('map').setView([50.735851, 7.10066], 13);
         
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
+            }).addTo(map);
         
-        const marker = L.marker([50.735851, 7.10066]).addTo(map);
+            const marker = L.marker([50.735851, 7.10066]).addTo(map);
         
-        const redIcon = L.icon({
+            const redIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png', // Icône rouge
             shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png', // Ombre par défaut
             iconSize: [25, 41], // Taille de l'icône
@@ -130,6 +134,59 @@
         for (let count = 0; count < data.length; count++){
             L.marker([data[count].lat, data[count].lon], { icon: redIcon }).addTo(map);
             }
-    </script>
+            </script>
+
+            <button class="phone-button">
+                <img src="../views/styles/media/home/phoneIcone.svg" alt="Help">
+                <h4>Emergency</h4>
+            </button>
+    </header>
+
+    <main></main>
+    <section class="reports">
+        <h2>Latest & Nearest Reports</h2>
+        <div id="report-list">
+            <!-- Placeholder 1 -->
+            <div class="report-card">
+                <h3>I found this cat/I lost</h3>
+                <p class="user">ConfusedPotato</p>
+                <div class="details">
+                    <span>
+                        <img src="../views/styles/media/home/watchIcon.svg" alt="Time Icon">
+                        23.02.2021 at 6PM
+                    </span>
+                    <span>
+                        <img src="../views/styles/media/home/mapIcone.svg" alt="Map Icon">
+                        64025 Prospect Road
+                    </span>
+                </div>
+                <div class="image-placeholder">
+                    <img src="https://via.placeholder.com/150" alt="Placeholder">
+                </div>
+            </div>
+            <!-- Placeholder 2 -->
+            <div class="report-card">
+                <h3>Is it her/him?</h3>
+                <p class="user">WhatsADogAnyway</p>
+                <div class="details">
+                    <span>
+                        <img src="../views/styles/media/home/watchIcon.svg" alt="Time Icon">
+                        26.02.2021 at 10AM
+                    </span>
+                    <span>
+                        <img src="../views/styles/media/home/mapIcone.svg" alt="Map Icon">
+                        6923 Witch Road
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Conteneur pour le footer -->
+<div id="footer-placeholder"></div>
+<script src="../footer/loadFooter.js"></script>
+
 </body>
+
 </html>
