@@ -7,6 +7,7 @@ import usersRoute from './routes/users.mjs';
 import mainPageRoute from './routes/mainPage.mjs'
 import animalRegisterRoute from "./routes/animalRegister.mjs";
 import animalsRoute from "./routes/animals.mjs";
+import profileRoute from "./routes/profile.mjs";
 
 
 import { connection }  from "./routes/connectionDB.mjs";
@@ -43,5 +44,6 @@ app.use("/animap/api/animals", animalsRoute);
 app.use("/animap/login", loginRoute);
 app.use("/animap/api/users", usersRoute);
 app.use("/animap/index", mainPageRoute);
+app.use("/animap/profile", profileRoute);
 
 app.listen(PORT, () => console.log(`Server started: http://localhost:${PORT}/`))
