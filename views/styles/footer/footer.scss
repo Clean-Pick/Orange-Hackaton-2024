@@ -1,0 +1,46 @@
+@use "../reset_css.css";
+@use "../library";
+
+footer {
+  @include library.sizeBody;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100px); //Test
+  background-color: #b3b3b3; 
+  height: 65px;
+  width: 375px;
+
+  .footer-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+    max-width: 375px;
+    margin: auto;
+    gap: 31px;
+    padding: 0 40px;
+  
+    .footer-button {
+        all: unset; 
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+      &.center-button {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto; 
+        z-index: 1;
+        transform: translateY(-25px);
+        background-color: #b3b3b3; 
+        border-radius: 30px;
+        border: 2px solid #b3b3b3;
+      }
+    }
+  }
+}  
+

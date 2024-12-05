@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
+    <link rel="stylesheet" href="/views/styles/login/login.css">
 </head>
 <body>
-    <h2>Log In</h2>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="login-toggle">
+                <button><h4>SIGN IN</h4></button>
+                <button class="active"><h4>LOGIN</h4></button>
+            </div>
+            <img src="../styles/media/blackCat.svg" alt="Black Cat" class="login-cat">
+        </div>
+        <h1>Welcome back !</h1>
+        <p>Who are you ?</p>
+        <form action="/animap/login" method="post">
+            <input type="text" name="email_user" placeholder="Email">
+            <input type="password" name="password_user" placeholder="Password">
+            <button type="submit" class="validate-btn">Validate</button>
+        </form>
 
-    <form action="/animap/login" method="post">
-        <input type="text" name="email_user" placeholder="Mail">
-        <input type="text" name="password_user" placeholder="Password">
-        <input type="submit">
-    </form> 
+        <!-- Conteneur pour le footer -->
+        <div id="footer-placeholder"></div>
+        <script src="../footer/loadFooter.js"></script>
+
 </body>
 </html>
