@@ -2,257 +2,266 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-          crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          rel="stylesheet"/>
+    <script crossorigin=""
             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""></script>
-    <link rel="stylesheet" href="/views/styles/index.css">
-    <link rel="stylesheet" href="../styles/footer/footer.css">
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link href="/views/styles/index.css" rel="stylesheet">
+    <link href="../styles/footer/footer.css" rel="stylesheet">
 
     <title>Home</title>
 </head>
 <body>
-<header>
-    <div id="map" style="height: 306px;"></div>
-    <script>
-        const data = [
-            {
-                name: 'MS Moby Dick - Den Rhein erleben... BFF - Bonner Fähr- und Fahrgastschifffahrt - Bonner Schifffahrt',
-                lat: 50.7329687,
-                lon: 7.1096064
-            },
-            {
-                name: 'Phoenix Reisen GmbH',
-                lat: 50.74324,
-                lon: 7.10394 },
-            {
-                name: 'Ahoi-Schiff GmbH',
-                lat: 50.7580276,
-                lon: 7.173402 },
-            {
-                name: 'Cruiseperts - Dein Reisebüro für Land und Mee(h)r',
-                lat: 50.726727,
-                lon: 7.071422999999999
-            },
-            {
-                name: 'Bonner Personen Schiffahrt',
-                lat: 50.7350624,
-                lon: 7.1082918
-            },
-            {
-                name: 'Sir Robert Back-Office',
-                lat: 50.7432455,
-                lon: 7.0921112 },
-            {
-                name: 'Personenschiffahrt Siebengebirge E.G.',
-                lat: 50.6953792,
-                lon: 7.1580279
-            },
-            {
-                name: 'COMPASS Kreuzfahrten GmbH',
-                lat: 50.7379005,
-                lon: 7.129852400000001
-            },
-            {
-                name: 'Köln-Düsseldorfer Deutsche Rheinschiffahrt AG',
-                lat: 50.6734401,
-                lon: 7.191786800000001
-            },
-            {
-                name: 'Ms Beethoven',
-                lat: 50.7340374,
-                lon: 7.1091551 },
-            {
-                name: 'Reisebüro An der Oper - Rautenberg Reisen OHG - Bonn',
-                lat: 50.7368491,
-                lon: 7.1052597
-            },
-            {
-                name: 'Köln-Düsseldorfer Deutsche Rheinschifffahrt',
-                lat: 50.69068129999999,
-                lon: 7.171719299999999
-            },
-            {
-                name: 'KD-Ticket Office Bonn',
-                lat: 50.7356054,
-                lon: 7.107967299999999
-            },
-            {
-                name: 'Die TUI in Bonn',
-                lat: 50.7323818,
-                lon: 7.0988799 },
-            {
-                name: 'KreuzfahrtSuche',
-                lat: 50.7411846,
-                lon: 7.136131799999999 },
-            {
-                name: 'Filia Rheni - Eventkatamaran',
-                lat: 50.7348381,
-                lon: 7.1086839
-            },
-            {
-                name: 'Filia Rheni',
-                lat: 50.7348177,
-                lon: 7.1086946 },
-            {
-                name: 'Reisebüro Albatros',
-                lat: 50.8144463,
-                lon: 7.159764399999999
-            },
-            {
-                name: 'Weisse Flotte Rhein am Bonner Bogen - Bonner Personen Schiffahrt',
-                lat: 50.7169636,
-                lon: 7.1518893
-            },
-            {
-                name: 'Poseidon Bonner Schifffahrt',
-                lat: 50.73830419999999,
-                lon: 7.106966
+<div class="container">
+    <header>
+
+        <div id="map" style="height: 306px;"></div>
+        <script>
+            const data = [
+                {
+                    name: 'MS Moby Dick - Den Rhein erleben... BFF - Bonner Fähr- und Fahrgastschifffahrt - Bonner Schifffahrt',
+                    lat: 50.7329687,
+                    lon: 7.1096064
+                },
+                {
+                    name: 'Phoenix Reisen GmbH',
+                    lat: 50.74324,
+                    lon: 7.10394
+                },
+                {
+                    name: 'Ahoi-Schiff GmbH',
+                    lat: 50.7580276,
+                    lon: 7.173402
+                },
+                {
+                    name: 'Cruiseperts - Dein Reisebüro für Land und Mee(h)r',
+                    lat: 50.726727,
+                    lon: 7.071422999999999
+                },
+                {
+                    name: 'Bonner Personen Schiffahrt',
+                    lat: 50.7350624,
+                    lon: 7.1082918
+                },
+                {
+                    name: 'Sir Robert Back-Office',
+                    lat: 50.7432455,
+                    lon: 7.0921112
+                },
+                {
+                    name: 'Personenschiffahrt Siebengebirge E.G.',
+                    lat: 50.6953792,
+                    lon: 7.1580279
+                },
+                {
+                    name: 'COMPASS Kreuzfahrten GmbH',
+                    lat: 50.7379005,
+                    lon: 7.129852400000001
+                },
+                {
+                    name: 'Köln-Düsseldorfer Deutsche Rheinschiffahrt AG',
+                    lat: 50.6734401,
+                    lon: 7.191786800000001
+                },
+                {
+                    name: 'Ms Beethoven',
+                    lat: 50.7340374,
+                    lon: 7.1091551
+                },
+                {
+                    name: 'Reisebüro An der Oper - Rautenberg Reisen OHG - Bonn',
+                    lat: 50.7368491,
+                    lon: 7.1052597
+                },
+                {
+                    name: 'Köln-Düsseldorfer Deutsche Rheinschifffahrt',
+                    lat: 50.69068129999999,
+                    lon: 7.171719299999999
+                },
+                {
+                    name: 'KD-Ticket Office Bonn',
+                    lat: 50.7356054,
+                    lon: 7.107967299999999
+                },
+                {
+                    name: 'Die TUI in Bonn',
+                    lat: 50.7323818,
+                    lon: 7.0988799
+                },
+                {
+                    name: 'KreuzfahrtSuche',
+                    lat: 50.7411846,
+                    lon: 7.136131799999999
+                },
+                {
+                    name: 'Filia Rheni - Eventkatamaran',
+                    lat: 50.7348381,
+                    lon: 7.1086839
+                },
+                {
+                    name: 'Filia Rheni',
+                    lat: 50.7348177,
+                    lon: 7.1086946
+                },
+                {
+                    name: 'Reisebüro Albatros',
+                    lat: 50.8144463,
+                    lon: 7.159764399999999
+                },
+                {
+                    name: 'Weisse Flotte Rhein am Bonner Bogen - Bonner Personen Schiffahrt',
+                    lat: 50.7169636,
+                    lon: 7.1518893
+                },
+                {
+                    name: 'Poseidon Bonner Schifffahrt',
+                    lat: 50.73830419999999,
+                    lon: 7.106966
+                }
+            ]
+
+            const map = L.map('map').setView([50.735851, 7.10066], 13);
+
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            const marker = L.marker([50.735851, 7.10066]).addTo(map);
+
+            const redIcon = L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png', // Icône rouge
+                shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png', // Ombre par défaut
+                iconSize: [25, 41], // Taille de l'icône
+                iconAnchor: [12, 41], // Point d'ancrage de l'icône
+                shadowSize: [41, 41]  // Taille de l'ombre
+            });
+
+            for (let count = 0; count < data.length; count++) {
+                L.marker([data[count].lat, data[count].lon], {icon: redIcon}).addTo(map);
             }
-        ]
+        </script>
 
-        const map = L.map('map').setView([50.735851, 7.10066], 13);
-
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        }).addTo(map);
-
-        const marker = L.marker([50.735851, 7.10066]).addTo(map);
-
-        const redIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png', // Icône rouge
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png', // Ombre par défaut
-            iconSize: [25, 41], // Taille de l'icône
-            iconAnchor: [12, 41], // Point d'ancrage de l'icône
-            shadowSize: [41, 41]  // Taille de l'ombre
-        });
-
-        for (let count = 0; count < data.length; count++){
-            L.marker([data[count].lat, data[count].lon], { icon: redIcon }).addTo(map);
-        }
-    </script>
-
-    <div class="emergency__container">
-        <button class="phone-button">
-            <img src="../views/styles/media/icons/phone-solid.svg" alt="Help">
-            <h1>Emergency</h1>
-        </button>
-    </div>
-
-</header>
-
-<main></main>
-<section class="reports">
-    <h3 class="reports__title">Latest & Nearest Reports</h3>
-    <div id="report-list">
-        <!-- Placeholder 1 -->
-        <div class="report-card">
-
-            <div class="reportCard__textContent">
-                <h4>I found this cat/I lost</h4>
-                <p class="pseudo">ConfusedPotato</p>
-
-                <div class="infos">
-                    <div class="infos__imgContainer">
-                        <img alt="stopwatch" src="../views/styles/media/icons/stopwatch-solid.svg"/>
-                    </div>
-                    <p class="infos__date">01 May 2021 00:00</p>
-
-                    <div class="infos__imgContainer">
-                        <img alt="location Dot" src="../views/styles/media/icons/location-dot-solid.svg" />
-                    </div>
-                    <p class="infos__adress">North Jillian</p>
-                </div>
-            </div>
-
-            <div class="image__container">
-                <img src="../views/images/home/pixel.jpg" alt="Placeholder">
-            </div>
-
-        </div>
-        <!-- Placeholder 2 -->
-        <div class="report-card">
-
-            <div class="reportCard__textContent">
-                <h4>Is it him/her ?</h4>
-                <p class="pseudo">WhatsADogAnyway</p>
-
-                <div class="infos">
-                    <div class="infos__imgContainer">
-                        <img alt="stopwatch" src="../views/styles/media/icons/stopwatch-solid.svg"/>
-                    </div>
-                    <p class="infos__date">01 May 2021 00:00</p>
-
-                    <div class="infos__imgContainer">
-                        <img alt="location Dot" src="../views/styles/media/icons/location-dot-solid.svg" />
-                    </div>
-                    <p class="infos__adress">North Jillian</p>
-                </div>
-            </div>
-        </div>
-        <!-- Placeholder 3 -->
-        <div class="report-card">
-
-            <div class="reportCard__textContent">
-                <h4>Who's pet is this ?</h4>
-                <p class="pseudo">WhoAmI</p>
-
-                <div class="infos">
-                    <div class="infos__imgContainer">
-                        <img alt="stopwatch" src="../views/styles/media/icons/stopwatch-solid.svg"/>
-                    </div>
-                    <p class="infos__date">01 May 2021 00:00</p>
-
-                    <div class="infos__imgContainer">
-                        <img alt="location Dot" src="../views/styles/media/icons/location-dot-solid.svg" />
-                    </div>
-                    <p class="infos__adress">North Jillian</p>
-                </div>
-            </div>
-
-            <div class="image__container">
-                <img src="../views/images/home/pixel2.jpg" alt="Placeholder">
-            </div>
-
-        </div>
-        <!-- Placeholder 4 -->
-        <div class="report-card">
-
-            <div class="reportCard__textContent">
-                <h4>I lost puppy Cerberus</h4>
-                <p class="pseudo">Hades</p>
-
-                <div class="infos">
-                    <div class="infos__imgContainer">
-                        <img alt="stopwatch" src="../views/styles/media/icons/stopwatch-solid.svg"/>
-                    </div>
-                    <p class="infos__date">01 May 2021 00:00</p>
-
-                    <div class="infos__imgContainer">
-                        <img alt="location Dot" src="../views/styles/media/icons/location-dot-solid.svg" />
-                    </div>
-                    <p class="infos__adress">North Jillian</p>
-                </div>
-            </div>
-
-            <div class="image__container">
-                <img src="../views/images/home/dogs.jpg" alt="Placeholder">
-            </div>
-
+        <div class="emergency__container">
+            <button class="phone-button">
+                <img alt="Help" src="../views/styles/media/icons/phone-solid.svg">
+                <h1>Emergency</h1>
+            </button>
         </div>
 
-    </div>
-</section>
-</main>
+    </header>
 
-<!-- Conteneur pour le footer -->
-<div id="footer-placeholder"></div>
-<script src="../footer/loadFooter.js"></script>
+    <main>
+        <section class="reports">
+            <h3 class="reports__title">Latest & Nearest Reports</h3>
+            <div id="report-list">
+                <!-- Placeholder 1 -->
+                <div class="report-card">
 
+                    <div class="reportCard__textContent">
+                        <h4>I found this cat/I lost</h4>
+                        <p class="pseudo">ConfusedPotato</p>
+
+                        <div class="infos">
+                            <div class="infos__imgContainer">
+                                <img alt="stopwatch" src="../views/styles/media/icons/stopwatch-solid.svg"/>
+                            </div>
+                            <p class="infos__date">01 May 2021 00:00</p>
+
+                            <div class="infos__imgContainer">
+                                <img alt="location Dot" src="../views/styles/media/icons/location-dot-solid.svg"/>
+                            </div>
+                            <p class="infos__adress">North Jillian</p>
+                        </div>
+                    </div>
+
+                    <div class="image__container">
+                        <img alt="Placeholder" src="../views/images/home/pixel.jpg">
+                    </div>
+
+                </div>
+                <!-- Placeholder 2 -->
+                <div class="report-card">
+
+                    <div class="reportCard__textContent">
+                        <h4>Is it him/her ?</h4>
+                        <p class="pseudo">WhatsADogAnyway</p>
+
+                        <div class="infos">
+                            <div class="infos__imgContainer">
+                                <img alt="stopwatch" src="../views/styles/media/icons/stopwatch-solid.svg"/>
+                            </div>
+                            <p class="infos__date">01 May 2021 00:00</p>
+
+                            <div class="infos__imgContainer">
+                                <img alt="location Dot" src="../views/styles/media/icons/location-dot-solid.svg"/>
+                            </div>
+                            <p class="infos__adress">North Jillian</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Placeholder 3 -->
+                <div class="report-card">
+
+                    <div class="reportCard__textContent">
+                        <h4>Who's pet is this ?</h4>
+                        <p class="pseudo">WhoAmI</p>
+
+                        <div class="infos">
+                            <div class="infos__imgContainer">
+                                <img alt="stopwatch" src="../views/styles/media/icons/stopwatch-solid.svg"/>
+                            </div>
+                            <p class="infos__date">01 May 2021 00:00</p>
+
+                            <div class="infos__imgContainer">
+                                <img alt="location Dot" src="../views/styles/media/icons/location-dot-solid.svg"/>
+                            </div>
+                            <p class="infos__adress">North Jillian</p>
+                        </div>
+                    </div>
+
+                    <div class="image__container">
+                        <img alt="Placeholder" src="../views/images/home/pixel2.jpg">
+                    </div>
+
+                </div>
+                <!-- Placeholder 4 -->
+                <div class="report-card">
+
+                    <div class="reportCard__textContent">
+                        <h4>I lost puppy Cerberus</h4>
+                        <p class="pseudo">Hades</p>
+
+                        <div class="infos">
+                            <div class="infos__imgContainer">
+                                <img alt="stopwatch" src="../views/styles/media/icons/stopwatch-solid.svg"/>
+                            </div>
+                            <p class="infos__date">01 May 2021 00:00</p>
+
+                            <div class="infos__imgContainer">
+                                <img alt="location Dot" src="../views/styles/media/icons/location-dot-solid.svg"/>
+                            </div>
+                            <p class="infos__adress">North Jillian</p>
+                        </div>
+                    </div>
+
+                    <div class="image__container">
+                        <img alt="Placeholder" src="../views/images/home/dogs.jpg">
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Conteneur pour le footer -->
+    <div id="footer-placeholder"></div>
+    <script src="../footer/loadFooter.js"></script>
+</div>
 </body>
 
 </html>

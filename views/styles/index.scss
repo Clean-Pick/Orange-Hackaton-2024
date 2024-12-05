@@ -6,6 +6,10 @@ body {
   @include library.Nunito;
 }
 
+.container {
+  @include library.sizeBody;
+}
+
 header {
 
   #map {
