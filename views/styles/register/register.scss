@@ -6,6 +6,11 @@ body {
   @include library.Nunito;
 }
 
+.container {
+  @include library.sizeBody;
+  box-shadow: none;
+}
+
 // HEADER
 .container__header {
   position: relative;
