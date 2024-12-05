@@ -4,7 +4,6 @@
 body {
   @include library.sizeBody;
   @include library.Nunito;
-  border: 1px solid black;
 }
 
 // HEADER
@@ -71,14 +70,9 @@ form {
 }
 
 .form__input__data {
-  padding-bottom: 0.3rem;
+  padding: 0.3rem 0.5rem;
   border: none;
   border-bottom: 1px solid black;
-  color: black;
-
-  &::placeholder {
-    color: black;
-  }
 }
 
 .form__input__submit {

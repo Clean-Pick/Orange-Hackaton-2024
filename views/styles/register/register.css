@@ -70,8 +70,10 @@ body {
   margin: auto;
   overflow: auto;
   box-sizing: border-box;
+  border: 1px solid white;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
   font-family: "Nunito";
-  border: 1px solid black;
 }
 
 .container__header {
@@ -131,13 +133,9 @@ form {
 }
 
 .form__input__data {
-  padding-bottom: 0.3rem;
+  padding: 0.3rem 0.5rem;
   border: none;
   border-bottom: 1px solid black;
-  color: black;
-}
-.form__input__data::placeholder {
-  color: black;
 }
 
 .form__input__submit {
