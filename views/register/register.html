@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Register</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/register/register.css" />
+    <title>Register - Animap</title>
+  </head>
+  <body>
+    <header>
+      <div class="container__header">
+        <div class="button__header">
+          <p class="button__header__signin">Sign in</p>
+          <p class="button__header__login">Login</p>
+        </div>
+        <div class="background__header"></div>
+      </div>
+    </header>
 
-    <form action="/animap/register" method="post">
-        <input type="text" name="name_user" placeholder="Name">
-        <input type="text" name="email_user" placeholder="Mail">
-        <input type="text" name="telefone_user" placeholder="Phone number">
-        <input type="password" name="password_user" placeholder="Password">
-        <input type="submit">
-    </form>
-</body>
+    <main>
+      <section class="content__top__form">
+        <h2>Welcome !</h2>
+        <p>Ready to saves lives ?</p>
+      </section>
+
+      <section class="content__form">
+        <form action="/animap/register" method="post">
+          <input class="form__input__data" type="text" name="name_user" placeholder="Name" />
+          <input class="form__input__data" type="text" name="email_user" placeholder="Mail" />
+          <input class="form__input__data" type="text" name="telefone_user" placeholder="Phone number" />
+          <input class="form__input__data" type="password" name="password_user" placeholder="Password" />
+          <input class="form__input__submit" type="submit" value="Validate" />
+        </form>
+      </section>
+    </main>
+
+    <!-- Conteneur pour le footer -->
+    <div id="footer-placeholder"></div>
+    <script src="../footer/loadFooter.js"></script>
+  </body>
 </html>
